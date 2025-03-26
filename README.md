@@ -17,7 +17,6 @@ A fully automated Bash script (written in Python) to set up a ready-to-use WordP
 
 - Ubuntu/Debian-based Linux system
 - Root privileges (`sudo` access)
-- Internet connection
 
 ---
 
