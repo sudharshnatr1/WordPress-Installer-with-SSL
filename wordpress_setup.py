@@ -45,8 +45,8 @@ try:
     subprocess.run(["apt-get", "update"], check=True)
     print("Installing required packages: " + " ".join(packages) + " ...")
     subprocess.run(["apt-get", "install", "-y"] + packages, check=True)
-except subprocess.CalledProcessError as e:
-    print(f"Error: Package installation failed ({e}).")
+except subprocess.CalledProcessError as errorr :
+    print(f"Error: Package installation failed {errorr}.")
     sys.exit(1)
 
 try:
@@ -126,13 +126,13 @@ if domain:
     try:
         with open(vhost_file, "w") as f:
             f.write(vhost_config)
-    except Exception as e:
-        print(f"Error: Could not write Apache vhost file ({e}).")
+    except Exception as exep:
+        print(f"Error: Could not write Apache vhost file ({exep}).")
         sys.exit(1)
     try:
         subprocess.run(["a2ensite", f"{domain}.conf"], check=True)
-    except subprocess.CalledProcessError as e:
-        print(f"Error: Failed to enable site configuration ({e}).")
+    except subprocess.CalledProcessError as errorr:
+        print(f"Error: Failed to enable site configuration ({errorr}).")
         sys.exit(1)
 else:
     apache_conf = "/etc/apache2/apache2.conf"
@@ -194,8 +194,8 @@ if domain and use_ssl:
     print(f"- An SSL certificate has been installed. Visit https://{domain} to verify the HTTPS connection.")
 if mysqlinstall == 'y' or mysqlinstall == 'yes':
     print("- A MySQL database and user for WordPress have been created:")
-    print(f"    Database Name: {db_name}")
-    print(f"    Database User: {db_user}")
+    print(f"        Database Name: {db_name}")
+    print(f"        Database User: {db_user}")
     print(f"    Database Password: {db_pass}")
 print("\nNext steps:")
 print(f"1. In your web browser, visit {site_url} to run the WordPress setup wizard.")
