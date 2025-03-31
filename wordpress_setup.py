@@ -108,11 +108,10 @@ except subprocess.CalledProcessError:
 if domain:
     vhost_file = f"/etc/apache2/sites-available/{domain}.conf"
     vhost_config = f"""<VirtualHost *:80>
-    ServerAdmin webmaster@localhost
     ServerName {domain}
-    ServerAlias www.{domain}
+    ServerAdmin webmaster@localhost
     DocumentRoot /var/www/html
-    Redirect permanent / https://{domain}/
+
     ErrorLog ${{APACHE_LOG_DIR}}/error.log
     CustomLog ${{APACHE_LOG_DIR}}/access.log combined
 
