@@ -39,7 +39,7 @@ A fully automated Bash script (written in Python) to set up a ready-to-use WordP
     ```
 2. Run the script with root privileges:
     ```bash
-    sudo python3 wordpress_installer.py
+    sudo python3 wordpress_setup.py
     ```
 
 4. Follow the interactive prompts:
