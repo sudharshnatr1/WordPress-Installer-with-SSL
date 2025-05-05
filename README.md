@@ -1,8 +1,8 @@
-# 🌀 One-Command WordPress Installer for Ubuntu
+#  One-Command WordPress Installer for Ubuntu
 
 A fully automated Bash script (written in Python) to set up a ready-to-use WordPress website on an Ubuntu server. This script handles everything from installing necessary packages, setting up MySQL, enabling Apache modules, downloading WordPress, and optionally configuring SSL via Let's Encrypt.
 
-## 🚀 Features
+## Features
 
 - Installs Apache, MySQL/MariaDB, PHP, and WordPress
 - Optional domain configuration with Apache VirtualHost
@@ -13,14 +13,14 @@ A fully automated Bash script (written in Python) to set up a ready-to-use WordP
 
 ---
 
-## ⚙️ Requirements
+## Requirements
 
 - Ubuntu/Debian-based Linux system
 - Root privileges (`sudo` access)
 
 ---
 
-## 🧰 Packages Installed
+## Packages Installed
 
 - Apache2
 - MySQL Server
@@ -30,7 +30,7 @@ A fully automated Bash script (written in Python) to set up a ready-to-use WordP
 
 ---
 
-## 🛠️ Usage
+## Usage
 
 1. Clone the repo:
     ```bash
@@ -49,7 +49,7 @@ A fully automated Bash script (written in Python) to set up a ready-to-use WordP
 
 ---
 
-## 🌐 Access Your Site
+## Access Your Site
 
 - **Without a domain:** http://localhost (or your server's IP)
 - **With domain and SSL:** https://yourdomain.com
